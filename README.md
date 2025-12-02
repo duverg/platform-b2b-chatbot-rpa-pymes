@@ -41,6 +41,11 @@
 Plataforma B2B: Integración de Chatbot y RPA para Pymes en Expansión.
 
 ### Introducción
+Las pequeñas y medianas empresas (Pymes) B2B que están creciendo suelen enfrentar una carga operativa que limita su potencial de crecimiento. Sus equipos, con recursos limitados, deben atender a los clientes en varios canales, dar seguimiento a oportunidades, generar documentos y coordinarse entre áreas. Por eso, hasta el 60% del tiempo se dedica a tareas repetitivas en vez de actividades estratégicas (García et al., 2023). Esta situación provoca respuestas lentas en el 45% de las consultas importantes y la pérdida del 30% de los clientes potenciales en los primeros meses de expansión (Forrester Research, 2023). Esto se debe más a problemas operativos que a una falta de capacidad comercial.
+
+Las soluciones actuales solo resuelven partes del problema, como chatbots básicos para la atención inicial, herramientas de automatización robótica de procesos (RPA) aisladas o sistemas CRM/ERP complejos. Sin embargo, ninguna de estas opciones ofrece una gestión integral que combine inteligencia conversacional, automatización de procesos, organización de documentos y una base de datos unificada en un flujo de trabajo coherente y escalable.
+
+Esta investigación propone crear una arquitectura de gestión B2B unificada. Esta solución integrará un chatbot conversacional contextual para interactuar con clientes a través de WhatsApp Business para consultas rápidas, chat web (con y sin autenticación) para información importante y correo electrónico para documentación formal. También incluirá RPA para automatizar procesos internos como la generación de documentos, actualización de sistemas y seguimientos, además de un sistema de plantillas inteligentes para cotizaciones, contratos y acuerdos de confidencialidad, todo en una base de datos centralizada. El objetivo es organizar y agilizar la operación. La plataforma se implementará y validará en pymes en expansión, evaluando su impacto en la reducción de la carga operativa, la velocidad de respuesta, la retención de clientes y la capacidad de crecer de forma sostenible.
 
 ### Objetivos
 
