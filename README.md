@@ -32,6 +32,7 @@
 * **Resultados esperados:** *(De 0 a 10 puntos)*
 * **Presupuesto:** *(De 0 a 10 puntos)*
 * **Referencias bibliográficas** *(De 0 a 10 puntos)*
+
 ***Nota de la propuesta: ( puntaje total / 20 )***
 
 ## Propuesta
