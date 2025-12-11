@@ -15,4 +15,4 @@
 
 ## Cronograma de actividades
 
-![Timeline](images/Trabajo-de-Grado-UdeA.png)
+![Timeline](images/Timeline-Trabajo-de-Grado-UdeA)
