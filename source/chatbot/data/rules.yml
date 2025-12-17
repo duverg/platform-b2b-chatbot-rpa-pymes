@@ -1,0 +1,33 @@
+version: "3.1"
+
+rules:
+  - rule: Say hello
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Gatekeeper - Reject Out of Scope
+    steps:
+      - intent: request_out_of_scope
+      - action: utter_reject_scope
+
+  - rule: Activate Engineering Form (Valid Service)
+    steps:
+      - intent: request_valid_service
+      - action: engineering_specs_form
+      - active_loop: engineering_specs_form
+
+  - rule: Submit Form
+    condition:
+      - active_loop: engineering_specs_form
+    steps:
+      - action: engineering_specs_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_submit
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye

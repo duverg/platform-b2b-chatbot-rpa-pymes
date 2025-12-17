@@ -1,0 +1,64 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - good morning
+      - hey there
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - see you later
+      - stop
+
+  - intent: request_valid_service
+    examples: |
+      - I need a [BMS](service_type) validation system
+      - quote for a [testing](service_type) equipment
+      - I want to validate [batteries](service_type)
+      - [HIL](service_type) simulation request
+      - [Signal acquisition](service_type) board
+
+  - intent: request_out_of_scope
+    examples: |
+      - I need to design an [Inverter](service_type)
+      - Quote for a [DC/DC converter](service_type)
+      - [Traction motor](service_type) driver
+      - Solar [inverter](service_type) design
+
+  - intent: inform_specs
+    examples: |
+      - It is for [automotive](industry_sector)
+      - [industrial](industry_sector) application
+      - [HV](voltage_class) system
+      - [LV](voltage_class)
+      - high voltage [HV](voltage_class)
+      - low voltage [LV](voltage_class)
+      - [automotive](industry_sector) sector
+      - [industrial](industry_sector) use
+
+  - synonym: hv
+    examples: |
+      - high voltage
+      - High Voltage
+      - HIGH VOLTAGE
+
+  - synonym: lv
+    examples: |
+      - low voltage
+      - Low Voltage
+      - LOW VOLTAGE
+
+  - synonym: automotive
+    examples: |
+      - auto
+      - car industry
+      - vehicle
+
+  - synonym: industrial
+    examples: |
+      - industry
+      - manufacturing

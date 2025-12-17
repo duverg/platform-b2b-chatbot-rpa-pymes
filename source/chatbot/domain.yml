@@ -1,0 +1,61 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - request_valid_service
+  - request_out_of_scope
+  - inform_specs
+
+entities:
+  - industry_sector
+  - voltage_class
+  - service_type
+
+slots:
+  industry_sector:
+    type: categorical
+    values:
+      - automotive
+      - industrial
+    mappings:
+      - type: from_entity
+        entity: industry_sector
+
+  voltage_class:
+    type: categorical
+    values:
+      - hv
+      - lv
+    mappings:
+      - type: from_entity
+        entity: voltage_class
+
+forms:
+  engineering_specs_form:
+    required_slots:
+      - industry_sector
+      - voltage_class
+
+responses:
+  utter_greet:
+    - text: "Welcome to our Engineering Portal. We specialize in Testing, BMS validation, and LV/HV systems. How can we help?"
+
+  utter_reject_scope:
+    - text: "We appreciate your interest, but we do not offer design services for Inverters, DC/DC Traction, or Motor Control >10kW."
+
+  utter_ask_industry_sector:
+    - text: "Is this project for the Automotive sector or Industrial sector?"
+
+  utter_ask_voltage_class:
+    - text: "What is the voltage class? (HV for High Voltage or LV for Low Voltage)"
+
+  utter_submit:
+    - text: "Perfect. We have logged your requirements: Sector {industry_sector} / Voltage {voltage_class}. An engineer will contact you with a ROM estimation."
+
+  utter_goodbye:
+    - text: "Goodbye! Let us know if you need more engineering support."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

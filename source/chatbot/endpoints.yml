@@ -1,0 +1,14 @@
+# Configuration for Rasa SDK Action Server
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# Configuration for Rasa NLU Model Server
+# models:
+#   url: http://localhost:5002
+#   wait_time_between_pulls: 10
+
+# Configuration for tracking conversation events
+# tracker_store:
+#   type: sql
+#   dialect: "sqlite"
+#   db: "rasa.db"

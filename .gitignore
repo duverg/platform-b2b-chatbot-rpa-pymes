@@ -1,0 +1,4 @@
+*.tar.gz
+/source/venv/*
+/source/chatbot/actions/__pycache__/*
+/source/chatbot/.rasa/*

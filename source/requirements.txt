@@ -1,0 +1,5 @@
+pandas
+numpy
+rasa
+robotframework
+fastapi

@@ -1,0 +1,37 @@
+version: "3.1"
+
+stories:
+  - story: happy path - valid engineering request
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_valid_service
+      - action: engineering_specs_form
+      - active_loop: engineering_specs_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: utter_submit
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: sad path - out of scope request
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_out_of_scope
+      - action: utter_reject_scope
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: interactive path - user interrupts form but continues
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: request_valid_service
+      - action: engineering_specs_form
+      - active_loop: engineering_specs_form
+      - intent: inform_specs
+      - action: engineering_specs_form
+      - active_loop: null
+      - action: utter_submit
